@@ -1,4 +1,4 @@
-import { FC, DOMAttributes } from 'react'
+import type { FC, DOMAttributes } from 'react'
 import { TButton } from './types'
 
 import classNames from 'classnames'

@@ -1,21 +1,15 @@
-import { MouseEvent } from 'react'
 import { Layout } from 'components'
-import { Button } from 'ui-kit'
+import { Route, Routes } from 'react-router-dom'
+import { ButtonPage } from 'pages'
+import { ERoutes } from 'enums'
 
 export const App: React.FC = () => {
-	const handleButtonClick = (event: MouseEvent) => {
-		console.log('button click event: ', event)
-	}
-
 	return (
 		<div className='App'>
 			<Layout>
-				<h2>UI KIT</h2>
-				<hr />
-				<h2>Button</h2>
-				<Button isDisabled={true} onClick={handleButtonClick}>
-					Send
-				</Button>
+				<Routes>
+					<Route path={ERoutes.Button} element={<ButtonPage />} />
+				</Routes>
 			</Layout>
 		</div>
 	)
